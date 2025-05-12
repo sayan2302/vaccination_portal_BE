@@ -31,4 +31,4 @@ app.listen(PORT, () => {
 
 
 // Export the app as a serverless function
-export const handler = serverless(app);
+// export const handler = serverless(app);
