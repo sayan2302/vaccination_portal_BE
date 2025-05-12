@@ -1,5 +1,5 @@
 import express from 'express';
-import Router from '../routes/route.js';
+import Router from './routes/route.js';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import serverless from 'serverless-http';
