@@ -1,12 +1,13 @@
 import express from 'express';
-import Router from './routes/route.js';
+import Router from '../routes/route.js';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import serverless from 'serverless-http';
 
 
 // Initialize Express App
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = 8000;
 
 
 // Middleware
@@ -26,3 +27,8 @@ mongoose.connect(MONGO_URI)
 app.listen(PORT, () => {
     console.log(`Server is running ...`);
 });
+
+
+
+// Export the app as a serverless function
+export const handler = serverless(app);
